@@ -57,4 +57,23 @@ buttonText.textContent = siteContent['cta']['button'];
 let heroImage = document.querySelector('.cta img');
 heroImage.src = siteContent['cta']['img-src'];
 
-let topCon = document.querySelectorAll('.top-content');
+//TOP CONTENT SECTION
+let topCon = document.querySelectorAll('.top-content .text-content'); //there's gotta be a better way to do this
+topCon[0].firstChild.textContent = siteContent['main-content']['features-h4']
+topCon[0].lastChild.textContent = siteContent['main-content']['features-content']
+topCon[1].firstChild.textContent = siteContent['main-content']['about-h4']
+topCon[1].lastChild.textContent = siteContent['main-content']['about-content']
+
+//MIDDLE IMAGE section
+document.querySelector('#middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//BOTTOM CONTENT
+let botCon = document.querySelectorAll('.bottom-content .text-content');
+botCon[0].firstChild.textContent = siteContent['main-content']['services-h4']
+botCon[0].lastChild.textContent = siteContent['main-content']['services-content']
+botCon[1].firstChild.textContent = siteContent['main-content']['product-h4']
+botCon[1].lastChild.textContent = siteContent['main-content']['product-content']
+botCon[2].firstChild.textContent = siteContent['main-content']['vision-h4']
+botCon[2].lastChild.textContent = siteContent['main-content']['vision-content']
+
+//CONTACT section

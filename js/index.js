@@ -40,3 +40,21 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//NAV SECTION
+let navs = document.querySelectorAll("nav a");
+for (let i = 0; i < navs.length; i++) { //probably better to do this with forEach, but not sure how.
+  navs[i].textContent = siteContent["nav"][`nav-item-${i+1}`];
+}
+
+//CTA SECTION
+let topHeadline = document.querySelector(".cta-text h1");
+topHeadline.textContent = siteContent['cta']['h1'];
+
+let buttonText = document.querySelector('.cta-text button');
+buttonText.textContent = siteContent['cta']['button'];
+
+let heroImage = document.querySelector('.cta img');
+heroImage.src = siteContent['cta']['img-src'];
+
+let topCon = document.querySelectorAll('.top-content');

@@ -58,24 +58,24 @@ buttonText.textContent = siteContent['cta']['button'];
 let heroImage = document.querySelector('.cta img');
 heroImage.src = siteContent['cta']['img-src'];
 
-//TOP CONTENT SECTION - not taking the h4 formatting?
+//TOP CONTENT SECTION
 let topCon = document.querySelectorAll('.top-content .text-content'); //there's gotta be a better way to do this
-topCon[0].firstChild.textContent = siteContent['main-content']['features-h4']
-topCon[0].lastChild.textContent = siteContent['main-content']['features-content']
-topCon[1].firstChild.textContent = siteContent['main-content']['about-h4']
-topCon[1].lastChild.textContent = siteContent['main-content']['about-content']
+topCon[0].firstElementChild.textContent = siteContent['main-content']['features-h4']
+topCon[0].lastElementChild.textContent = siteContent['main-content']['features-content']
+topCon[1].firstElementChild.textContent = siteContent['main-content']['about-h4']
+topCon[1].lastElementChild.textContent = siteContent['main-content']['about-content']
 
 //MIDDLE IMAGE section
 document.querySelector('#middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-//BOTTOM CONTENT - why are these h4s not getting the css formatting? no margins either?
+//BOTTOM CONTENT
 const botCon = document.querySelectorAll('.bottom-content .text-content');
-botCon[0].firstChild.textContent = siteContent['main-content']['services-h4']
-botCon[0].lastChild.textContent = siteContent['main-content']['services-content']
-botCon[1].firstChild.textContent = siteContent['main-content']['product-h4']
-botCon[1].lastChild.textContent = siteContent['main-content']['product-content']
-botCon[2].firstChild.textContent = siteContent['main-content']['vision-h4']
-botCon[2].lastChild.textContent = siteContent['main-content']['vision-content']
+botCon[0].firstElementChild.textContent = siteContent['main-content']['services-h4']
+botCon[0].lastElementChild.textContent = siteContent['main-content']['services-content']
+botCon[1].firstElementChild.textContent = siteContent['main-content']['product-h4']
+botCon[1].lastElementChild.textContent = siteContent['main-content']['product-content']
+botCon[2].firstElementChild.textContent = siteContent['main-content']['vision-h4']
+botCon[2].lastElementChild.textContent = siteContent['main-content']['vision-content']
 
 //CONTACT section
 const contactConH4 = document.querySelector(".contact h4");

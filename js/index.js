@@ -46,6 +46,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navs = document.querySelectorAll("nav a");
 for (let i = 0; i < navs.length; i++) { //probably better to do this with forEach, but not sure how.
   navs[i].textContent = siteContent["nav"][`nav-item-${i+1}`];
+  navs[i].style.color = "green";
 }
 
 //CTA SECTION
@@ -91,3 +92,17 @@ p3.textContent = siteContent["contact"]["email"];
 //FOOTER SECTION
 const ftr = document.querySelector('footer');
 ftr.textContent = siteContent["footer"]["copyright"]
+
+//ADD NEW SHENNANIGANS
+const appendItem = document.createElement('a');
+appendItem.textContent = "Ballyhoo";
+appendItem.href = "#";
+appendItem.style.color = "green";
+const prependItem = document.createElement('a');
+prependItem.textContent = "Skylarking";
+prependItem.href = "#";
+prependItem.style.color = "green";
+
+document.querySelector('nav').append(appendItem);
+document.querySelector('nav').prepend(prependItem);
+

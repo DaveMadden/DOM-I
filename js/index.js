@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
 //NAV SECTION
 let navs = document.querySelectorAll("nav a");
 for (let i = 0; i < navs.length; i++) { //probably better to do this with forEach, but not sure how.
@@ -57,7 +58,7 @@ buttonText.textContent = siteContent['cta']['button'];
 let heroImage = document.querySelector('.cta img');
 heroImage.src = siteContent['cta']['img-src'];
 
-//TOP CONTENT SECTION
+//TOP CONTENT SECTION - not taking the h4 formatting?
 let topCon = document.querySelectorAll('.top-content .text-content'); //there's gotta be a better way to do this
 topCon[0].firstChild.textContent = siteContent['main-content']['features-h4']
 topCon[0].lastChild.textContent = siteContent['main-content']['features-content']
@@ -67,8 +68,8 @@ topCon[1].lastChild.textContent = siteContent['main-content']['about-content']
 //MIDDLE IMAGE section
 document.querySelector('#middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-//BOTTOM CONTENT
-let botCon = document.querySelectorAll('.bottom-content .text-content');
+//BOTTOM CONTENT - why are these h4s not getting the css formatting? no margins either?
+const botCon = document.querySelectorAll('.bottom-content .text-content');
 botCon[0].firstChild.textContent = siteContent['main-content']['services-h4']
 botCon[0].lastChild.textContent = siteContent['main-content']['services-content']
 botCon[1].firstChild.textContent = siteContent['main-content']['product-h4']
@@ -77,3 +78,16 @@ botCon[2].firstChild.textContent = siteContent['main-content']['vision-h4']
 botCon[2].lastChild.textContent = siteContent['main-content']['vision-content']
 
 //CONTACT section
+const contactConH4 = document.querySelector(".contact h4");
+contactConH4.textContent = siteContent["contact"]["contact-h4"];
+const p1 = contactConH4.nextElementSibling;
+p1.textContent = siteContent["contact"]["address"];
+const p2 = p1.nextElementSibling;
+const p3 = p2.nextElementSibling;
+p2.textContent = siteContent["contact"]["phone"];
+p3.textContent = siteContent["contact"]["email"];
+
+
+//FOOTER SECTION
+const ftr = document.querySelector('footer');
+ftr.textContent = siteContent["footer"]["copyright"]

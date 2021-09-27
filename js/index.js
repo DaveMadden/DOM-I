@@ -46,7 +46,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navs = document.querySelectorAll("nav a");
 for (let i = 0; i < navs.length; i++) { //probably better to do this with forEach, but not sure how.
   navs[i].textContent = siteContent["nav"][`nav-item-${i+1}`];
-  navs[i].style.color = "green";
+  // navs[i].style.color = "green";
 }
 
 //CTA SECTION
@@ -97,12 +97,14 @@ ftr.textContent = siteContent["footer"]["copyright"]
 const appendItem = document.createElement('a');
 appendItem.textContent = "Ballyhoo";
 appendItem.href = "#";
-appendItem.style.color = "green";
+// appendItem.style.color = "green";
 const prependItem = document.createElement('a');
 prependItem.textContent = "Skylarking";
 prependItem.href = "#";
-prependItem.style.color = "green";
+// prependItem.style.color = "green";
 
 document.querySelector('nav').append(appendItem);
 document.querySelector('nav').prepend(prependItem);
 
+const navMod = document.querySelectorAll('nav a');
+navMod.forEach(x => x.style.color = "green");
